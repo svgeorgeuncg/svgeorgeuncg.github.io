@@ -1,0 +1,72 @@
+/* Reset all margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4a90e2, #002b55);
+}
+
+/* Main container */
+.main-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Title/header styling */
+h1 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Button container setup */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* General button styling */
+.button {
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.5em;
+    color: black;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Specific button styles */
+.exercises-btn {
+    background-color: #f39c12; /* Light orange */
+}
+
+.exercises-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+.project-btn {
+    background-color: #3498db; /* Light blue */
+}
+
+.project-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Add button hover effect */
+.button:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Page</title>
+    <!-- Correct path to the CSS file in the 'css' folder -->
+    <link rel="stylesheet" href="../css/exercises.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side with scrollable buttons -->
+        <div class="sidebar">
+            <div class="home-button">
+                <a href="../index.html"> <!-- Correct path to the home page -->
+                    <img src="../images/home_icon.png" alt="Home Icon"> <!-- Correct path to the home icon -->
+                </a>
+            </div>
+            <div class="button-list">
+                <button onclick="loadExercise('exercise1.html')">Exercise 1</button>
+                <button onclick="loadExercise('exercise2.html')">Exercise 2</button>
+                <button onclick="loadExercise('exercise3.html')">Exercise 3</button>
+                <button onclick="loadExercise('exercise4.html')">Exercise 4</button>
+                <button onclick="loadExercise('exercise5.html')">Exercise 5</button>
+                <button onclick="loadExercise('exercise6.html')">Exercise 6</button>
+                <button onclick="loadExercise('exercise7.html')">Exercise 7</button>
+                <button onclick="loadExercise('exercise8.html')">Exercise 8</button>
+                <button onclick="loadExercise('exercise9.html')">Exercise 9</button>
+                <button onclick="loadExercise('exercise10.html')">Exercise 10</button>
+            </div>
+        </div>
+
+        <!-- Right side content area -->
+        <div class="content">
+            <iframe id="exercise-frame" src="exercise1.html"></iframe> <!-- Initial exercise -->
+        </div>
+    </div>
+
+    <script>
+        function loadExercise(exercisePage) {
+            document.getElementById('exercise-frame').src = exercisePage;
+        }
+    </script>
+</body>
+</html>

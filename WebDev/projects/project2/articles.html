@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to bottom, #e0f7e4, #b2ebf2);
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        .chefs-hat {
+            width: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px; /* Space below the image */
+            cursor: pointer; /* Makes it clear it's clickable */
+        }
+        .articles-content {
+            max-width: 600px; /* Set maximum width for content */
+            text-align: center;
+            margin: 20px; /* Add some margin for spacing */
+        }
+        .oval-button {
+            background-color: darkblue; /* Dark blue color */
+            border-radius: 20px; /* Oval shape */
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* Removes underline from links */
+            transition: background-color 0.3s;
+            margin-bottom: 20px; /* Add some space below the button */
+        }
+        .article-section {
+            margin-bottom: 40px; /* Increased spacing between article sections */
+        }
+        img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 10px; /* Space above images */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/projects/project2/food_images/chefs_hat.png" alt="Chef's Hat" class="chefs-hat" onclick="window.location.href='index.html'">
+        <h1>Articles</h1>
+    </header>
+    
+    <div class="articles-content">
+        <p>Welcome to the Articles section! Here you can find informative articles about various culinary topics, cooking tips, and recipes to enhance your cooking skills.</p>
+
+        <div class="article-section">
+            <h2>Explore the New Menu at Chipotle</h2>
+            <p>Chipotle is offering a limited-time promotion: Buy one Burrito Bowl and get the second at 50% off! Try their new seasonal ingredients that include fresh cilantro lime rice and spicy sofritas.</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Chipotle Promotion">
+        </div>
+        
+        <div class="article-section">
+            <h2>Raaz Indian Kitchen's Flavorful Specials</h2>
+            <p>This week, Raaz is featuring Gobi Manchurian as their dish of the week! Enjoy a 10% discount when you order it with any Samosa Chaat. Don't miss the chance to savor authentic Indian flavors!</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Raaz Indian Kitchen">
+        </div>
+
+        <div class="article-section">
+            <h2>Using Flex Dollars for Your Meals</h2>
+            <p>Did you know you can use your Flex Dollars at all dining locations on campus? Save money while enjoying your favorite meals. Be sure to check your balance before heading out!</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Flex Dollars">
+        </div>
+        
+        <div class="article-section">
+            <h2>Favorite Dishes from Last Week!</h2>
+            <p>I recently tried the Tempura Udon from Sushi Republic and it was delicious! The crispy tempura perfectly complemented the rich broth. If you haven't tried it yet, I highly recommend it!</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Favorite Dish">
+        </div>
+
+        <div class="article-section">
+            <h2>New Promotions at Sushi Republic</h2>
+            <p>Sushi Republic is celebrating the launch of their new sushi rolls! Enjoy a special discount on any roll ordered during happy hour. Check out their new Spicy Tuna Crunch Roll, which is receiving rave reviews!</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Sushi Republic Promotion">
+        </div>
+
+        <div class="article-section">
+            <h2>Culinary Classes Available!</h2>
+            <p>Interested in learning how to cook? Many dining locations are offering culinary classes this month. From sushi-making to pasta workshops, there’s something for everyone. Sign up early as spots fill up quickly!</p>
+            <img src="/projects/project2/food_images/discount_food.png" alt="Culinary Classes">
+        </div>
+        
+    </div>
+
+    <footer>
+        <a class="oval-button" href="index.html">Back to Home</a>
+    </footer>
+</body>
+</html>

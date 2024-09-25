@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine on Campus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #e0f7e4, #b2ebf2); /* Light green radiant background */
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        .chefs-hat {
+            width: 100px; /* Adjust the size as needed */
+            margin-bottom: 10px; /* Space below the image */
+            cursor: pointer; /* Makes it clear it's clickable */
+        }
+        .restaurant-buttons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .restaurant-button {
+            margin: 5px;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px; /* Makes the buttons oval-shaped */
+            transition: background-color 0.3s;
+        }
+        .chipotle { background-color: red; }
+        .raaz { background-color: orange; }
+        .sushi { background-color: green; }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .dish {
+            display: none;
+            text-align: center;
+        }
+        .dish img {
+            width: 150px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for enlarge effect */
+        }
+        .dish img.active {
+            transform: scale(1.5); /* Enlarge the image */
+            z-index: 1; /* Bring enlarged image to front */
+        }
+        .dish-description {
+            display: none;
+        }
+
+        .oval-button {
+            background-color: darkblue; /* Dark blue color */
+            border-radius: 20px; /* Oval shape */
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* Removes underline from links */
+            transition: background-color 0.3s;
+        }
+
+        /* Adjusting paragraph width */
+        p {
+            max-width: 600px; /* Set maximum width for the paragraph */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/projects/project2/food_images/chefs_hat.png" alt="Chef's Hat" class="chefs-hat" onclick="window.location.href='index.html'">
+        <h1>Dine on Campus</h1>
+        <p>Are you a culinary adventurer in search of the perfect meal on campus? Look no further! We've curated a list of the most exceptional dishes that are sure to tantalize your taste buds. From fresh pizzas to mouthwatering sushi, this list has got you covered. So, put on your foodie hat and let's dive into the delightful world of flavors...</p>
+    </header>
+    
+    <div class="restaurant-buttons">
+        <button class="restaurant-button chipotle" onclick="showMenu('chipotle')">Chipotle<br><span style="font-size: 0.9em;">11 AM - 11 PM</span></button>
+        <button class="restaurant-button raaz" onclick="showMenu('raaz')">Raaz Indian Kitchen<br><span style="font-size: 0.9em;">11:30 AM - 10 PM</span></button>
+        <button class="restaurant-button sushi" onclick="showMenu('sushi')">Sushi Republic<br><span style="font-size: 0.9em;">11:30 AM - 9:30 PM</span></button>
+    </div>
+    
+    <div class="menu">
+        <div id="chipotle" class="dish">
+            <h2>Chipotle Dishes</h2>
+            <img src="/projects/project2/food_images/chipotle_bowl.jpg" alt="Burrito Bowl" onclick="showDish('chipotle-bowl', this)">
+            <img src="/projects/project2/food_images/burrito.webp" alt="Burrito" onclick="showDish('chipotle-burrito', this)">
+            <img src="/projects/project2/food_images/chips_guac.webp" alt="Chips and Guac" onclick="showDish('chipotle-chips', this)">
+            <div id="chipotle-bowl" class="dish-description">
+                <h3>Burrito Bowl - $9.50</h3>
+                <p>A delicious bowl filled with all your favorite burrito ingredients, customized to your liking.</p>
+            </div>
+            <div id="chipotle-burrito" class="dish-description">
+                <h3>Burrito - $8.25</h3>
+                <p>A classic burrito stuffed with your choice of meat, beans, and fresh toppings.</p>
+            </div>
+            <div id="chipotle-chips" class="dish-description">
+                <h3>Chips and Guac - $3.50</h3>
+                <p>Crispy tortilla chips served with creamy guacamole.</p>
+            </div>
+        </div>
+
+        <div id="raaz" class="dish">
+            <h2>Raaz Indian Kitchen Dishes</h2>
+            <img src="/projects/project2/food_images/gobi_manchurian.jpg" alt="Gobi Manchurian" onclick="showDish('raaz-gobi', this)">
+            <img src="/projects/project2/food_images/samosa_chaat.jpg" alt="Samosa Chaat" onclick="showDish('raaz-samosa', this)">
+            <img src="/projects/project2/food_images/chicken_pakora.webp" alt="Chicken Pakora" onclick="showDish('raaz-chicken', this)">
+            <div id="raaz-gobi" class="dish-description">
+                <h3>Gobi Manchurian</h3>
+                <p>A popular Indo-Chinese dish made with cauliflower, tossed in a tangy sauce.</p>
+            </div>
+            <div id="raaz-samosa" class="dish-description">
+                <h3>Samosa Chaat</h3>
+                <p>Crispy samosas topped with yogurt, chutneys, and spices.</p>
+            </div>
+            <div id="raaz-chicken" class="dish-description">
+                <h3>Chicken Pakora</h3>
+                <p>Deep-fried chicken fritters seasoned with spices.</p>
+            </div>
+        </div>
+
+        <div id="sushi" class="dish">
+            <h2>Sushi Republic Dishes</h2>
+            <img src="/projects/project2/food_images/tempura_udon.jpg" alt="Tempura Udon" onclick="showDish('sushi-tempura', this)">
+            <img src="/projects/project2/food_images/spicy_seafood_champon_ramen.webp" alt="Spicy Seafood Champon Ramen" onclick="showDish('sushi-seafood', this)">
+            <img src="/projects/project2/food_images/beef_shoyu_ramen.webp" alt="Beef Shoyu Ramen" onclick="showDish('sushi-beef', this)">
+            <div id="sushi-tempura" class="dish-description">
+                <h3>Tempura Udon - $10.50</h3>
+                <p>Thick udon noodles served in a rich broth with crispy tempura.</p>
+            </div>
+            <div id="sushi-seafood" class="dish-description">
+                <h3>Spicy Seafood Champon Ramen - $12.50</h3>
+                <p>A hearty ramen dish with assorted seafood in a spicy broth.</p>
+            </div>
+            <div id="sushi-beef" class="dish-description">
+                <h3>Beef Shoyu Ramen - $11.00</h3>
+                <p>Tender beef in a savory soy sauce broth with noodles.</p>
+            </div>
+        </div>
+        
+        <div class="meal-plan-button">
+            <a class="oval-button" href="meal_plan.html">Create a Meal Plan</a>
+            <a class="oval-button" href="articles.html">Articles</a>
+        </div>
+    </div>
+
+    <script>
+        function showMenu(restaurant) {
+            const dishes = document.querySelectorAll('.dish');
+            const descriptions = document.querySelectorAll('.dish-description');
+
+            dishes.forEach(dish => {
+                dish.style.display = 'none';
+            });
+
+            descriptions.forEach(desc => {
+                desc.style.display = 'none';
+            });
+
+            document.getElementById(restaurant).style.display = 'flex';
+        }
+
+        function showDish(dishId, imgElement) {
+            const descriptions = document.querySelectorAll('.dish-description');
+            const images = document.querySelectorAll('.dish img');
+
+            // Reset any previously enlarged images
+            images.forEach(image => {
+                image.classList.remove('active');
+            });
+
+            // Hide all descriptions
+            descriptions.forEach(desc => {
+                desc.style.display = 'none';
+            });
+
+            // Show the clicked image's description
+            document.getElementById(dishId).style.display = 'block';
+            
+            // Add 'active' class to enlarge the clicked image
+            imgElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>
