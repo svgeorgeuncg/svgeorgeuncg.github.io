@@ -1,0 +1,74 @@
+    /*
+  Name: Samuel
+  Date: 10.07.2024
+  CSC 372-01
+
+  This file contains the CSS styles for the Rock-Paper-Scissors game. It includes styles
+  for player throw images, computer throw section, outcome display, and scoreboard.
+*/
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Player Throw Section */
+#player-throw {
+    margin-bottom: 20px;
+}
+
+.player-choices img {
+    width: 100px;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.player-choices img.selected {
+    border-color: #007bff;
+}
+
+/* Computer Throw Section */
+#computer-throw img {
+    width: 100px;
+}
+
+/* Outcome Section */
+#outcome {
+    margin-top: 20px;
+}
+
+#game-result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Scoreboard */
+#scoreboard {
+    margin-top: 30px;
+}
+
+#scoreboard p {
+    font-size: 18px;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #c82333;
+}
