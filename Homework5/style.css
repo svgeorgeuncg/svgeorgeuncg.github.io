@@ -1,0 +1,122 @@
+/* File Header Comment */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #000000, #0000FF);
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+  }
+  
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10; /* Ensures gallery appears above bubbles */
+  }
+  
+  .repo-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .repo-card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .repo-details {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .repo-details span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Bubbles */
+  @keyframes rise {
+    0% {
+      bottom: -10%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      bottom: 110%;
+      opacity: 0;
+    }
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    background-color: rgba(173, 216, 230, 0.6); /* Light Blue Bubble */
+    border-radius: 50%;
+    opacity: 0;
+    animation: rise 10s infinite ease-in;
+  }
+  
+  .bubble:nth-child(2) {
+    background-color: rgba(240, 248, 255, 0.6); /* Lighter Color Bubble */
+    animation-duration: 12s;
+  }
+  
+  .bubble:nth-child(3) {
+    animation-duration: 8s;
+  }
+  
+  .bubble:nth-child(4) {
+    animation-duration: 15s;
+  }
+  
+  .bubble:nth-child(5) {
+    background-color: rgba(173, 216, 230, 0.8); /* Slightly darker blue */
+    animation-duration: 14s;
+  }
+  
+  .bubble:nth-child(6) {
+    animation-duration: 11s;
+  }
+  
+  /* Bubble size and position */
+  .bubble {
+    width: 40px;
+    height: 40px;
+    left: calc(10% + 80% * random());
+    animation-timing-function: cubic-bezier(0.3, 0.6, 0.7, 1);
+  }
+  
+  .bubble:nth-child(odd) {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .bubble:nth-child(even) {
+    width: 80px;
+    height: 80px;
+  }
+  
